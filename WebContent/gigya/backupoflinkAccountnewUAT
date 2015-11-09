@@ -1,0 +1,246 @@
+<div class="gigya-screen-set" id="iselect-desktop-v1-LinkAccounts" data-on-pending-registration-screen="iselect-desktop-v1-RegistrationLogin/gigya-complete-registration-screen"
+data-on-pending-verification-screen="iselect-desktop-v1-RegistrationLogin/gigya-email-verification-screen"
+data-on-pending-tfa-registration-screen="iselect-desktop-v1-RegistrationLogin/gigya-tfa-registration-screen"
+data-on-pending-tfa-verification-screen="iselect-desktop-v1-RegistrationLogin/gigya-tfa-verification-screen"
+data-on-pending-password-change-screen="iselect-desktop-v1-RegistrationLogin/gigya-password-change-required-screen"
+data-on-existing-login-identifier-screen="iselect-desktop-v1-LinkAccounts/gigya-link-account-screen"
+data-on-pending-recent-login-screen="iselect-desktop-v1-ReAuthentication/gigya-reauthentication-screen"
+data-on-accounts-linked-screen="_finish" data-width="390" data-responsive="true"
+data-start-screen="gigya-link-account-screen">
+  <div class="gigya-screen" id="gigya-link-account-screen" data-caption="Already a member?"
+  data-width="390" style="display: block;">
+    <form class="gigya-link-accounts-form">
+      <div class="gigya-layout-row "></div>
+      <div class="gigya-layout-row">
+        <div class="gigya-layout-cell " style="width: 100%">
+          <div class="gigya-container" data-login-identities="site-only" style="100%">
+            <label class="gigya-composite-control gigya-composite-control-header gigya-label"
+            style="text-align: center;">This is the first time you have logged in with a social network.</label>
+          </div>
+          <div class="gigya-container" data-login-identities="social" style="100%">
+            <label class="gigya-composite-control gigya-composite-control-header gigya-label"
+            style="text-align: center;">You have previously logged in with a different social network.</label>
+          </div>
+          <div class="gigya-container" data-login-identities="site-and-social">
+            <div class="gigya-composite-control gigya-spacer" data-units="1" style="height: 10px;"></div>
+            <label class="gigya-composite-control gigya-composite-control-label " style="text-align: center;">To connect with your existing social network account:</label>
+          </div>
+          <div class="gigya-container" data-login-identities="social-only">
+            <label class="gigya-composite-control gigya-composite-control-label " style="text-align: center;">To connect with your existing account, click below:</label>
+          </div>
+          <div class="gigya-container" data-login-identities="social">
+            <div class="gigya-composite-control gigya-composite-control-social-login">
+              <div class="gigya-social-login">
+                <param name="version" value="2">
+                <param name="width" value="350">
+                <param name="height" value="50">
+                <param name="enabledProviders" value="facebook,Twitter,linkedin,google,yahoo,messenger">
+                <param name="buttonsStyle" value="fullLogoColored">
+                <param name="pagingButtonStyle" value="arrows">
+                <param name="buttonSize" value="35">
+                <param name="showWhatsThis" value="false">
+                <param name="showTermsLink" value="false">
+                <param name="hideGigyaLink" value="true">
+                <param name="loginMode" value="link">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="gigya-layout-row">
+        <div class="gigya-layout-cell " style="width: 100%;">
+          <div class="gigya-container" data-login-identities="site-and-social" style="width: 100%;">
+            <div class="gigya-divider">
+              <div class="gigya-divider-content">or</div>
+            </div>
+            <label class="gigya-composite-control gigya-composite-control-label" style="text-align: center;">Provide your existing site password:</label>
+          </div>
+          <div class="gigya-container" data-login-identities="site-only" style="width: 100%;">
+            <label class="gigya-composite-control gigya-composite-control-label" style="text-align: center;">To connect with your existing account, please enter your password:</label>
+          </div>
+          <div class="gigya-container" data-login-identities="site">
+            <div class="gigya-composite-control gigya-composite-control-textbox">
+              <label class="gigya-label">
+                <span class="gigya-label-text">Email:</span>
+              </label>
+              <input type="text" name="loginID" class="gigya-input-text" tabindex="1" disabled="disabled">
+              <span class="gigya-error-msg" data-bound-to="loginID"></span>
+            </div>
+            <div class="gigya-composite-control gigya-composite-control-password">
+              <label class="gigya-label">
+                <label for="password" class="gigya-label">
+                  <span class="gigya-label-text">Password: <a data-switch-screen="gigya-forgot-password-screen" class="forgotPassword">Forgot password</a>
+                  </span>
+                  <div class="gigya-clear"></div>
+                </label>
+              </label>
+              <input type="password" name="password" class="gigya-input-password" tabindex="1">
+              <span class="gigya-error-msg" data-bound-to="password"></span>
+            </div>
+            <div class="gigya-composite-control gigya-composite-control-captcha-widget">
+              <div class="gigya-captcha-wrapper gigya-error-display" data-error-flags="captchaNeeded"
+              data-bound-to="gigya-link-accounts-form">
+                <div class="gigya-captcha">
+                  <param name="theme" value="white">
+                </div>
+                <span class="gigya-error-msg" data-bound-to="captchaText"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="gigya-clear"></div>
+      </div>
+      <div class="gigya-layout-row ">
+        <div class="gigya-container" data-login-identities="site">
+          <div class="gigya-layout-cell" style="width: 100%">
+            <div class="gigya-layout-row">
+              <div class="gigya-layout-cell ">
+                <div class="gigya-error-display gigya-composite-control gigya-composite-control-form-error"
+                data-bound-to="gigya-link-accounts-form">
+                  <div class="gigya-error-msg gigya-form-error-msg" data-bound-to="gigya-link-accounts-form"></div>
+                </div>
+              </div>
+              <div class="gigya-layout-cell ">
+                <div class="gigya-composite-control gigya-composite-control-submit">
+                  <input type="submit" class="gigya-input-submit" value="Submit" tabindex="3">
+                </div>
+              </div>
+              <div class="gigya-clear"></div>
+            </div>
+          </div>
+        </div>
+        <div class="gigya-clear"></div>
+      </div>
+      <div class="gigya-layout-row ">
+        <label class="gigya-composite-control gigya-composite-control-label" style="text-align: center; display: block;">To create a new account, <a class="gigya-skip-link-account" data-switch-screen="_skip">click here</a>
+        </label>
+      </div>
+      <div class="gigya-clear"></div>
+    </form>
+  </div>
+  <div class="gigya-screen" id="gigya-forgot-password-screen" data-caption="Forgot password"
+  data-width="350" style="max-width: 350px; display: none;">
+    <form class="gigya-reset-password-form" data-on-success-screen="gigya-forgot-password-success-screen">
+      <div class="gigya-layout-row ">
+        <label class="gigya-composite-control gigya-composite-control-label" style="display: block;">Please click the 'Submit' button to reset your password:</label>
+        <div class="gigya-composite-control gigya-spacer"
+        data-units="1" style="height: 10px;"></div>
+        <div class="gigya-composite-control gigya-composite-control-textbox" style="display: block;">
+          <label class="gigya-label">
+            <span class="gigya-label-text">Email:</span>
+          </label>
+          <input type="text" name="loginID" class="gigya-input-text" disabled="disabled"
+          tabindex="1">
+          <span class="gigya-error-msg" data-bound-to="loginID"></span>
+        </div>
+      </div>
+      <div class="gigya-layout-row">
+        <div class="gigya-layout-cell "></div>
+        <div class="gigya-layout-cell ">
+          <div class="gigya-composite-control gigya-composite-control-submit" style="display: block;">
+            <input type="submit" class="gigya-input-submit" value="Submit" tabindex="2">
+          </div>
+        </div>
+        <div class="gigya-clear"></div>
+      </div>
+      <div class="gigya-layout-row ">
+        <div class="gigya-layout-cell ">
+          <label class="gigya-composite-control gigya-composite-control-label"><a data-switch-screen="gigya-link-account-screen">Back to Login</a>
+          </label>
+        </div>
+        <div class="gigya-layout-cell ">
+          <div class="gigya-layout-row ">
+            <div class="gigya-layout-cell "></div>
+            <div class="gigya-layout-cell "></div>
+            <div class="gigya-clear"></div>
+          </div>
+        </div>
+        <div class="gigya-clear"></div>
+      </div>
+      <div class="gigya-layout-row "></div>
+      <div class="gigya-layout-row ">
+        <div class="gigya-layout-cell "></div>
+        <div class="gigya-layout-cell "></div>
+        <div class="gigya-clear"></div>
+      </div>
+      <div class="gigya-layout-row ">
+        <div class="gigya-layout-cell ">
+          <div class="gigya-layout-row ">
+            <div class="gigya-layout-cell "></div>
+            <div class="gigya-layout-cell "></div>
+            <div class="gigya-clear"></div>
+          </div>
+        </div>
+        <div class="gigya-layout-cell ">
+          <div class="gigya-layout-row ">
+            <div class="gigya-layout-cell "></div>
+            <div class="gigya-layout-cell "></div>
+            <div class="gigya-clear"></div>
+          </div>
+        </div>
+        <div class="gigya-clear"></div>
+      </div>
+      <div class="gigya-layout-row "></div>
+      <div class="gigya-clear"></div>
+    </form>
+  </div>
+  <div data-width="300" data-caption="Password reset" id="gigya-forgot-password-success-screen"
+  class="gigya-screen" style="max-width: 300px; display: none;">
+    <div class="gigya-layout-row ">
+      <div style="height: 20px;" data-units="4" class="gigya-composite-control gigya-spacer"></div>
+      <label class="gigya-composite-control gigya-composite-control-label gigya-message">An email regarding your password change has been sent to your email address.</label>
+      <div
+      class="gigya-composite-control gigya-spacer" data-units="5" style="height: 25px;"></div>
+  </div>
+  <div class="gigya-layout-row">
+    <div class="gigya-layout-cell "></div>
+    <div class="gigya-layout-cell ">
+      <label class="gigya-composite-control gigya-composite-control-label" style="text-align: right;"><a data-switch-screen="gigya-link-account-screen">Back to Login</a>
+      </label>
+    </div>
+    <div class="gigya-clear"></div>
+  </div>
+  <div class="gigya-layout-row ">
+    <div class="gigya-layout-cell ">
+      <div class="gigya-layout-row ">
+        <div class="gigya-layout-cell "></div>
+        <div class="gigya-layout-cell "></div>
+        <div class="gigya-clear"></div>
+      </div>
+    </div>
+    <div class="gigya-layout-cell ">
+      <div class="gigya-layout-row ">
+        <div class="gigya-layout-cell "></div>
+        <div class="gigya-layout-cell "></div>
+        <div class="gigya-clear"></div>
+      </div>
+    </div>
+    <div class="gigya-clear"></div>
+  </div>
+  <div class="gigya-layout-row "></div>
+  <div class="gigya-layout-row ">
+    <div class="gigya-layout-cell "></div>
+    <div class="gigya-layout-cell "></div>
+    <div class="gigya-clear"></div>
+  </div>
+  <div class="gigya-layout-row ">
+    <div class="gigya-layout-cell ">
+      <div class="gigya-layout-row ">
+        <div class="gigya-layout-cell "></div>
+        <div class="gigya-layout-cell "></div>
+        <div class="gigya-clear"></div>
+      </div>
+    </div>
+    <div class="gigya-layout-cell ">
+      <div class="gigya-layout-row ">
+        <div class="gigya-layout-cell "></div>
+        <div class="gigya-layout-cell "></div>
+        <div class="gigya-clear"></div>
+      </div>
+    </div>
+    <div class="gigya-clear"></div>
+  </div>
+  <div class="gigya-layout-row "></div>
+  <div class="gigya-clear"></div>
+</div>
+</div>

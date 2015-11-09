@@ -1,0 +1,29 @@
+<link rel='ractive' href='Clock.html'>
+
+<div class='clock-container'>
+  <Clock datetime='{{datetime}}'/>
+</div>
+
+<p>
+  Today is {{moment(datetime).format('dddd MMMM Do YYYY')}}.
+  The time is <strong>{{moment(datetime).format('h:mm:ss a')}}</strong>
+</p>
+
+<style>
+  .clock-container {
+    width: 10em;
+    float: left;
+  }
+  
+  p {
+    float: left;
+  }
+</style>
+
+<script>
+  component.exports = {
+    data: {
+      moment: require( 'moment' )
+    }
+  }
+</script>

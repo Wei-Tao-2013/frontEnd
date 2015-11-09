@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html ng-app="store">
+<head>
+  <meta charset='utf-8'>
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/angular.css" />
+  <title>Angular Demonstrate</title>
+</head>
+
+<body>
+  <h1>Angular Demo</h1>
+  
+  <div id="expressions">
+    <p> Number Demo : 1+2 = {{1+2}}</p>
+  </div>
+
+  <div id='container' ng-controller="StoreController as store">
+    <div ng-repeat="product in store.productsList">
+    <div class="product-block">
+    <p>{{product.name}}</p>
+    <p>{{product.price | currency}}</p>
+    <p>{{product.description}}</p>
+    <button ng-show="product.canPurchase">Add Button</button>
+    </div>
+    
+   <div  ng-controller="PanelController as panel">
+  <ul class="nav nav-pills">
+    <li ng-class="{active:panel.tab === 1}"><a href ng-click="panel.selectTab(1)">Description</a></li>
+    <li ng-class="{active:panel.tab === 2}"><a href ng-click="panel.selectTab(2)">Specification</a></li>
+    <li ng-class="{active:panel.tab === 3}"><a href ng-click="panel.selectTab(3)">Reviews</a></li>
+  </ul>
+  
+  <div class="panel" ng-show="panel.iselected(1) ">
+  <h4>Description</h4>
+  <p>{{product.description}}</p>
+  </div>
+  <div class="panel" ng-show="panel.iselected(2)">
+  <h4>Specification</h4>
+  <p>None yet</p>
+  </div>
+  <div class="panel" ng-show = "panel.iselected(3)">
+  <h4>Reviews</h4>
+ <blockquote ng-repeat="review in product.reviews">
+<b>Stars: {{review.stars}}</b>
+{{review.body}}
+<cite>by: {{review.author}}</cite>
+</blockquote>
+
+<form name="reviewForm">
+<select>
+<option value="1">1 star</option>
+<option value="2">2 stars</option>
+
+</select>
+<textarea></textarea>
+<label>by:</label>
+<input type="email" />
+<input type="submit" value="Submit Review" />
+</form>
+  </div>
+ </div>
+ 
+    </div>
+  </div>
+
+ 
+  <script src="js/jquery-2.0.3.min.js"></script>
+  <script src="js/1.2.20/angular.js"></script>
+  <script src="js/1.2.20/angular-route.js"></script>
+  <script src="js/1.2.13/angular-cookies.js"></script>
+  <script src='js/app.js'></script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang='en'>
+	<head>
+	  	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0" />
+		<meta name="description" content="" />
+		<link rel="stylesheet" href="css/style.css?version=16062015" />
+		<title>Gigya</title>
+	</head>
+	<body>
+		<a href="#" id="login">Login</a> | <a href="#" id="logout">Logout</a>
+		<div id="login-container">
+			<table>
+				<tr>
+					<td>Provider test:</td>
+					<td>
+						<span id="provider"></span>
+					</td>
+				</tr>
+				<tr>
+					<td>First Name:</td>
+					<td>
+						<span id="firstName"></span>
+					</td>
+				</tr>
+				<tr>
+					<td>Last Name:</td>
+					<td>
+						<span id="lastName"></span>
+					</td>
+				</tr>
+				<tr>
+					<td>Gender:</td>
+					<td>
+						<span id="gender"></span>
+					</td>
+				</tr>
+				<tr>
+					<td>Avatar:</td>
+					<td><img src="images/" title="avatar" id="avatar" /></td>
+				</tr>
+				<tr>
+					<td>Profile URI:</td>
+					<td><a href="#" title="Profile" id="profileURI"></a></td>
+				</tr>
+			</table>
+		</div>
+		<script src="http://cdn.gigya.com/js/gigya.js?apiKey=3_2M1vjSjqx9Wg9--gwzEPYdN32rjfPM68Gr3wM8hYZWttJHyRWBeP0SaYIsxCRSJB"></script>
+		<script src="js/script.js?version=16062015"></script>
+		<script>
+		var myRe =/^(?=.*[0-9])(?=.*[a-zA-Z])([a-zA-Z0-9]+)$/;
+		var myRe2 = /^(?=.*[a-zA-Z])(?=.*\d)(?=.*(_|[^\w])).+$/;
+		alert(myRe2.test("41lyyy"));
+		
+		</script>
+	</body>
+</html>
